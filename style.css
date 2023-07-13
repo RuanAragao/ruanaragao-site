@@ -89,7 +89,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 436px;
+    height: 375px;
 }
 
 .container header .text-wrapper {
@@ -122,6 +122,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+    body {
+        background-size: 300px;
+    }
+
     body::before {
         background: radial-gradient(100% 109.58% at 100.00% -0.00%, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%);
     }
@@ -155,4 +159,10 @@ a {
         font-size: 1.5rem;
         margin-top: 1rem;
     }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    padding: 6rem 1.35rem;
+  }
 }
