@@ -108,3 +108,38 @@ a {
   margin-top: 41px;
 }
 
+@media screen and (min-width: 768px) {
+    body::before {
+        background: radial-gradient(100% 109.58% at 100.00% -0.00%, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%);
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 2rem;
+    }
+
+    .container header {
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    .container header .text-wrapper {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .container header .text-wrapper .site-title {
+        font-size: 4rem;
+    }
+
+    .container header .text-wrapper .site-subtitle {
+        font-size: 2rem;
+    }
+
+    .container header .text-wrapper p {
+        text-align: left;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}
