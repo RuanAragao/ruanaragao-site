@@ -5,11 +5,28 @@
 }
 
 body {
+    height: 100vh;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: rgb(226 232 240);
+    background: url(avatar.jpeg), lightgray 50%;
     background-color: #00498D;
+    background-blend-mode: multiply;
+    background-size: 172px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0; 
+    background: radial-gradient(460px 416.75px at 100.00% 33px, rgb(255 255 255 / 0.30) 0%, rgb(255 255 255 / 0.00) 100%);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -44,32 +61,44 @@ a {
 
 .container {
     display: grid;
+    align-items: center;
     max-width: 1280px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
     margin: 0 auto;
     padding: 6rem 2rem;
 }
 
-header {
+.container header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 436px;
 }
 
-header .site-title {
+.container header .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container header .text-wrapper .site-title {
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal; 
 }
-header .site-subtitle {
+.container header .text-wrapper .site-subtitle {
     font-size: 1.75rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal; 
 }
 
-header p {
+.container header .text-wrapper p {
   text-align: center;
   font-size: 1.25rem;
   font-style: normal;
