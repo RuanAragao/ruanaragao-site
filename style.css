@@ -34,6 +34,19 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+main p {
+    color: rgb(226 232 240);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+main p a {
+    color: rgb(226 232 240);
+    text-decoration-line: underline; 
+}
+
 ul.networks {
     list-style: none;
     display: inline-flex;
@@ -114,13 +127,13 @@ a {
     }
 
     .container {
+        align-items: inherit;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         gap: 2rem;
     }
 
     .container header {
-        height: 100%;
         align-items: flex-start;
     }
 
