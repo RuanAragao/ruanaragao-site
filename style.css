@@ -5,12 +5,13 @@
 }
 
 body {
+    position: relative;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: rgb(226 232 240);
-    background: url(avatar.jpeg), lightgray 50%;
+    background: url(avatar.jpeg), lightgray 50% / cover;
     background-color: #00498D;
     background-blend-mode: multiply;
     background-size: 172px;
@@ -29,6 +30,21 @@ body::before {
     background: radial-gradient(460px 416.75px at 100.00% 33px, rgb(255 255 255 / 0.30) 0%, rgb(255 255 255 / 0.00) 100%);
     z-index: -1;
 }
+
+/* body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background: url(decoration.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    opacity: 0.5;
+    z-index: -1;
+} */
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -121,9 +137,30 @@ a {
   margin-top: 41px;
 }
 
+
+.shine {
+  width: 650px;
+  height: 650px;
+  background-color: #7ee787;
+  filter: blur(180px);
+  border-radius: 300px;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  mix-blend-mode: soft-light;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.card:hover .shine {
+  opacity: .85;
+}
+
+
 @media screen and (min-width: 768px) {
     body {
-        background-size: 300px;
+        background-size: contain;
+        background-position-x: right;
     }
 
     body::before {
@@ -161,7 +198,7 @@ a {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
   .container {
     padding: 6rem 1.35rem;
   }
